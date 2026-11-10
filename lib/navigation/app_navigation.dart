@@ -1,3 +1,4 @@
+import 'package:arena_cidada/screens/onboarding_screen.dart';
 import 'package:arena_cidada/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'app_routes.dart';
@@ -9,16 +10,12 @@ class AppNavigation {
         return MaterialPageRoute(builder: (_) => const SplashScreen());
       
       case AppRoutes.onboarding:
-        return MaterialPageRoute(
-          builder: (_) => const Scaffold(
-            body: Center(child: Text("onboarding")),
-          ),
-        );
+        return MaterialPageRoute(builder: (_) => const OnboardingScreen());
       
       case AppRoutes.home:
         return MaterialPageRoute(
           builder: (_) => const Scaffold(
-            body: Center(child: Text("home")),
+            body: Center(child: Text("Tela Home")),
           ),
         );
       
