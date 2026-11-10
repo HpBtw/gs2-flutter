@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'navigation/app_routes.dart';
+import 'navigation/app_navigation.dart';
 
 void main() {
   runApp(const ArenaCidadaApp());
@@ -16,7 +18,8 @@ class ArenaCidadaApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
         useMaterial3: true,
       ),
-      home: const Scaffold(body: Center(child: Text("inicio"))),
+      initialRoute: AppRoutes.splash,
+      onGenerateRoute: AppNavigation.generateRoute,
     );
   }
 }
