@@ -26,7 +26,7 @@ class _ArenaCidadaAppState extends State<ArenaCidadaApp> {
   Widget build(BuildContext context) {
     return ValueListenableBuilder<ThemeMode>(
       valueListenable: _themeNotifier,
-      builder: (_, ThemeMode currentMode, __) {
+      builder: (_, ThemeMode currentMode, _) {
         return MaterialApp(
           title: 'Arena Cidadã',
           debugShowCheckedModeBanner: false,
