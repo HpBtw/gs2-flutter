@@ -1,5 +1,5 @@
 import 'package:arena_cidada/components/endereco_card.dart';
-import 'package:arena_cidada/data/viacep_service.dart';
+import 'package:arena_cidada/repository/viacep_repositoy.dart';
 import 'package:arena_cidada/model/endereco.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -13,7 +13,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   final TextEditingController _cepController = TextEditingController();
-  final ViaCepService _viaCepService = ViaCepService();
+  final ViaCepRepository _viaCepService = ViaCepRepository();
 
   Endereco? _endereco;
   String? _mensagemErro;

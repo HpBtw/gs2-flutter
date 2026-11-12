@@ -1,4 +1,4 @@
-import 'package:arena_cidada/data/relato_repository.dart';
+import 'package:arena_cidada/repository/relato_repository.dart';
 import 'package:arena_cidada/model/endereco.dart';
 import 'package:arena_cidada/model/relato.dart';
 import 'package:flutter/material.dart';

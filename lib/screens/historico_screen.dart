@@ -1,4 +1,4 @@
-import 'package:arena_cidada/data/relato_repository.dart';
+import 'package:arena_cidada/repository/relato_repository.dart';
 import 'package:flutter/material.dart';
 
 class HistoricoScreen extends StatefulWidget {
@@ -13,7 +13,7 @@ class _HistoricoScreenState extends State<HistoricoScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final relatos = _repository.relatos;
+    final relatos = _repository.getAllRelatos();
 
     return Scaffold(
       appBar: AppBar(

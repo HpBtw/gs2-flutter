@@ -1,8 +1,9 @@
 import 'dart:convert';
+
 import 'package:arena_cidada/model/endereco.dart';
 import 'package:http/http.dart' as http;
 
-class ViaCepService {
+class ViaCepRepository {
   static const String _baseUrl = 'https://viacep.com.br/ws';
 
   Future<Endereco> buscarEndereco(String cep) async {
@@ -13,7 +14,10 @@ class ViaCepService {
     }
 
     final uri = Uri.parse('$_baseUrl/$cepLimpo/json/');
-    final response = await http.get(uri, headers: {'Accept': 'application/json'});
+    final response = await http.get(
+      uri,
+      headers: {'Accept': 'application/json'},
+    );
 
     if (response.statusCode != 200) {
       throw Exception(

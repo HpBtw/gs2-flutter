@@ -1,16 +1,8 @@
-
-import 'package:arena_cidada/model/relato.dart';
+import '../model/relato.dart';
 
 class RelatoRepository {
-  static final RelatoRepository _instancia = RelatoRepository._interno();
-  
-  factory RelatoRepository() {
-    return _instancia;
-  }
-  
-  RelatoRepository._interno();
-
-  final List<Relato> _relatos = [
+  // A variável 'static' mantém os dados vivos na memória durante o uso do app
+  static final List<Relato> _relatos = [
     Relato(
       data: '10/11/2026',
       problema: 'Alambrado furado na lateral',
@@ -31,7 +23,9 @@ class RelatoRepository {
     ),
   ];
 
-  List<Relato> get relatos => _relatos;
+  List<Relato> getAllRelatos() {
+    return _relatos;
+  }
 
   void adicionarRelato(Relato relato) {
     _relatos.insert(0, relato);
