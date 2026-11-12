@@ -5,4 +5,5 @@ abstract class AppRoutes {
   static const reportar = '/reportar';
   static const perfil = '/perfil';
   static const historico = '/historico';
+  static const configuracoes = '/configuracoes';
 }

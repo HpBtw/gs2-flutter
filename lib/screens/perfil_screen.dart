@@ -48,7 +48,9 @@ class PerfilScreen extends StatelessWidget {
                     leading: const Icon(Icons.settings),
                     title: const Text('Configurações'),
                     trailing: const Icon(Icons.arrow_forward_ios, size: 16),
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.pushNamed(context, '/configuracoes');
+                    },
                   ),
                   const Divider(height: 1),
                   ListTile(
