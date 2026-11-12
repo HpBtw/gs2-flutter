@@ -15,7 +15,7 @@ class ArenaCidadaApp extends StatelessWidget {
       title: 'Arena Cidadã',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF4CAF50)),
         useMaterial3: true,
       ),
       initialRoute: AppRoutes.splash,
