@@ -1,15 +1,51 @@
+import 'package:arena_cidada/data/relato_repository.dart';
 import 'package:arena_cidada/model/endereco.dart';
+import 'package:arena_cidada/model/relato.dart';
 import 'package:flutter/material.dart';
 
-class ReportarScreen extends StatelessWidget {
+class ReportarScreen extends StatefulWidget {
   final Endereco? endereco;
 
   const ReportarScreen({super.key, this.endereco});
 
   @override
+  State<ReportarScreen> createState() => _ReportarScreenState();
+}
+
+class _ReportarScreenState extends State<ReportarScreen> {
+  final TextEditingController _descricaoController = TextEditingController();
+  final RelatoRepository _repository = RelatoRepository();
+
+  void _enviarRelato() {
+    final descricao = _descricaoController.text.trim();
+    if (descricao.isEmpty) return;
+
+    final localizacao = widget.endereco != null 
+        ? '${widget.endereco!.logradouro}, ${widget.endereco!.bairro}' 
+        : 'Local não identificado';
+
+    final novoRelato = Relato(
+      data: '11/11/2026',
+      problema: descricao,
+      local: localizacao,
+      status: 'Aberto',
+    );
+
+    _repository.adicionarRelato(novoRelato);
+
+    Navigator.pop(context);
+  }
+
+  @override
+  void dispose() {
+    _descricaoController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
-    final localizacao = endereco != null 
-        ? '${endereco!.logradouro}, ${endereco!.bairro}' 
+    final localizacao = widget.endereco != null 
+        ? '${widget.endereco!.logradouro}, ${widget.endereco!.bairro}' 
         : 'Local não identificado';
 
     return Scaffold(
@@ -45,8 +81,9 @@ class ReportarScreen extends StatelessWidget {
               style: Theme.of(context).textTheme.bodyLarge,
             ),
             const SizedBox(height: 24),
-            const TextField(
-              decoration: InputDecoration(
+            TextField(
+              controller: _descricaoController,
+              decoration: const InputDecoration(
                 labelText: 'Descrição do problema',
                 hintText: 'Ex: Alambrado quebrado, iluminação falha...',
                 border: OutlineInputBorder(),
@@ -56,9 +93,7 @@ class ReportarScreen extends StatelessWidget {
             ),
             const SizedBox(height: 32),
             FilledButton.icon(
-              onPressed: () {
-                Navigator.pop(context);
-              },
+              onPressed: _enviarRelato,
               icon: const Icon(Icons.send),
               label: const Text('Enviar Relato'),
             ),

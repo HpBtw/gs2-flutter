@@ -14,7 +14,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   final TextEditingController _cepController = TextEditingController();
   final ViaCepService _viaCepService = ViaCepService();
-  
+
   Endereco? _endereco;
   String? _mensagemErro;
   bool _carregando = false;
@@ -28,15 +28,15 @@ class _HomeScreenState extends State<HomeScreen> {
 
     try {
       final endereco = await _viaCepService.buscarEndereco(_cepController.text);
-      
+
       if (!mounted) return;
-      
+
       setState(() {
         _endereco = endereco;
       });
     } catch (erro) {
       if (!mounted) return;
-      
+
       setState(() {
         _mensagemErro = erro.toString().replaceFirst('Exception: ', '');
       });
@@ -69,6 +69,15 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         title: const Text('Consulta ViaCEP'),
         centerTitle: true,
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.person_outline),
+            tooltip: 'Meu Perfil',
+            onPressed: () {
+              Navigator.pushNamed(context, '/perfil');
+            },
+          ),
+        ],
       ),
       body: SafeArea(
         child: SingleChildScrollView(
@@ -153,7 +162,7 @@ class _ErroCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
-    
+
     return Card(
       color: colorScheme.errorContainer,
       child: Padding(
