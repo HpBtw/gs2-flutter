@@ -57,35 +57,35 @@ Utilizamos a **API Pública ViaCEP** (`https://viacep.com.br/ws/`) na tela de Ze
 
 **Splash Screen:**
 
-- ![alt text](image.png)
+<img width="504" height="834" alt="image" src="https://github.com/user-attachments/assets/bc16d0ad-2c64-4d36-8acc-77aecef9d683" />
 
 **Onboarding:**
 
-- ![alt text](image-1.png)
-- ![alt text](image-2.png)
-- ![alt text](image-3.png)
+<img width="501" height="833" alt="image" src="https://github.com/user-attachments/assets/c1bc1428-4838-4873-96fa-903ae50e07ea" />
+<img width="498" height="837" alt="image" src="https://github.com/user-attachments/assets/9d90f74f-f961-48b3-86ce-f145d46acbdf" />
+<img width="503" height="826" alt="image" src="https://github.com/user-attachments/assets/1b9ab2d8-15e8-4a9f-89d4-7f706ceddbf4" />
 
 **Home:**
 
-- ![alt text](image-4.png)
-- ![alt text](image-5.png)
+<img width="505" height="833" alt="image" src="https://github.com/user-attachments/assets/b83d2355-b30a-4886-8705-7f9eedab132c" />
+<img width="506" height="835" alt="image" src="https://github.com/user-attachments/assets/c7b2c8b2-afa7-47c8-88b0-1f498f8fea15" />
 
 **Reportar Problema:**
 
-- ![alt text](image-6.png)
+<img width="500" height="834" alt="image" src="https://github.com/user-attachments/assets/da87f54e-9700-4680-99c3-aaafdc5124bb" />
 
 **Perfil:**
 
-- ![alt text](image-7.png)
+<img width="500" height="830" alt="image" src="https://github.com/user-attachments/assets/9e6e78b7-110c-4c4e-afa4-8f723a015f9a" />
 
 **Histórico:**
 
-- ![alt text](image-8.png)
+<img width="496" height="833" alt="image" src="https://github.com/user-attachments/assets/1723014a-4086-469c-bd42-c83fa6e53a1b" />
 
 **Configurações:**
 
-- ![alt text](image-9.png)
+<img width="505" height="832" alt="image" src="https://github.com/user-attachments/assets/5956d19a-6bf0-4653-a450-36c8dbe1f348" />
 
 **Ajuda e Suporte:**
 
-- ![alt text](image-10.png)
+<img width="500" height="834" alt="image" src="https://github.com/user-attachments/assets/5f302d58-aa93-4b40-9108-b83a75241fc8" />
