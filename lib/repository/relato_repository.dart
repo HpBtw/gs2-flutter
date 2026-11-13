@@ -1,7 +1,6 @@
 import '../model/relato.dart';
 
 class RelatoRepository {
-  // A variável 'static' mantém os dados vivos na memória durante o uso do app
   static final List<Relato> _relatos = [
     Relato(
       data: '10/11/2026',
